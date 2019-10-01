@@ -5,7 +5,6 @@
 package testutils
 
 import (
-	"log"
 	"testing"
 )
 
