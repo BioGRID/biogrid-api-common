@@ -7,8 +7,8 @@ package validation_test
 import (
 	"testing"
 	"github.com/stretchr/testify/assert"
-	"github.com/BioGRID/biogrid-auth-api/testutils"
-	"github.com/BioGRID/biogrid-auth-api/validation"
+	"github.com/BioGRID/biogrid-api-common/testutils"
+	"github.com/BioGRID/biogrid-api-common/validation"
 )
 
 var vh validation.ValidationHandler

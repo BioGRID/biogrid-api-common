@@ -4,7 +4,7 @@
 [[projects]]
   branch = "master"
   name = "github.com/BioGRID/biogrid-auth-api"
-  packages = ["concache","models","testutils","validation"]
+  packages = ["concache"]
   revision = "0cf632c1b24898cc0da7735060ccf3077a6982b6"
 
 [[projects]]
@@ -24,18 +24,6 @@
   packages = ["."]
   revision = "b32fa301c9fe55953584134cb6853a13c87ec0a1"
   version = "v0.16.0"
-
-[[projects]]
-  name = "github.com/go-sql-driver/mysql"
-  packages = ["."]
-  revision = "72cd26f257d44c1114970e19afddcd812016007e"
-  version = "v1.4.1"
-
-[[projects]]
-  name = "github.com/jmoiron/sqlx"
-  packages = [".","reflectx"]
-  revision = "d161d7a76b5661016ad0b085869f77fd410f3e6a"
-  version = "v1.2.0"
 
 [[projects]]
   name = "github.com/leodido/go-urn"
@@ -62,12 +50,6 @@
   version = "v1.4.0"
 
 [[projects]]
-  name = "google.golang.org/appengine"
-  packages = ["cloudsql"]
-  revision = "bddb1f54ecfd64b1350fd2dd897fa11d426632bc"
-  version = "v1.6.4"
-
-[[projects]]
   name = "gopkg.in/go-playground/validator.v9"
   packages = ["."]
   revision = "cd1bd581694a11c089aea885a26247c5f783a4cf"
@@ -82,6 +64,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "6665da08886c801cfea063401b3bae0cfa5427d6fbcea48d8ae0c1e657aba01c"
+  inputs-digest = "c59e1ce9cb64ba1c746ef35d464e7f77895ef5e874659355be014caff23535a7"
   solver-name = "gps-cdcl"
   solver-version = 1
