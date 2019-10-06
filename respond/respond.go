@@ -60,6 +60,7 @@ func JSONErrorWithIssues( w http.ResponseWriter, status int, message string, iss
 // for standardized json response
 func JSONCode( w http.ResponseWriter, status int, data interface{} ) {
 	w.Header( ).Set( "Content-Type", "application/json" )
+	w.Header( ).Set( "Access-Control-Allow-Origin", "*" )
 	//w.Header( ).Set( "Connection", "close" )
 	w.WriteHeader(status)
 	json.NewEncoder(w).Encode(data)
