@@ -26,6 +26,12 @@
   version = "v0.16.0"
 
 [[projects]]
+  name = "github.com/gorilla/mux"
+  packages = ["."]
+  revision = "00bdffe0f3c77e27d2cf6f5c70232a2d3e4d9c15"
+  version = "v1.7.3"
+
+[[projects]]
   name = "github.com/leodido/go-urn"
   packages = ["."]
   revision = "70078a794e8ea4b497ba7c19a78cd60f90ccf0f4"
@@ -64,6 +70,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "c59e1ce9cb64ba1c746ef35d464e7f77895ef5e874659355be014caff23535a7"
+  inputs-digest = "621c3be15aad7bccddbe0053071bfa87669c85dc7addab5acb816e8ae592cb45"
   solver-name = "gps-cdcl"
   solver-version = 1
