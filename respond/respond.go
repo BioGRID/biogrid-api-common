@@ -84,3 +84,11 @@ func JSONErrorWithDetail( w http.ResponseWriter, status int, message string, det
 	}
 	JSONCode( w, status, resp )
 }
+
+// Output results as Bytes
+func BYTEData( w http.ResponseWriter, status int, data []byte ) {
+	w.Header( ).Set( "Content-Type", "application/json" )
+	w.Header( ).Set( "Access-Control-Allow-Origin", "*" )
+	w.WriteHeader(status)
+	w.Write(data)
+}
