@@ -86,7 +86,7 @@ func JSONErrorWithDetail( w http.ResponseWriter, status int, message string, det
 }
 
 // Shortcut to respond with a status code and wrapped data
-func BYTEOK( w http.ResponseWriter, status int, data []byte ) {
+func BYTEOK( w http.ResponseWriter, data []byte ) {
 	BYTECode( w, http.StatusOK, data )
 }
 
