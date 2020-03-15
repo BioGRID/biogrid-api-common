@@ -97,7 +97,7 @@ func BYTEData( w http.ResponseWriter, status int, data []byte ) {
 
 // Output results as Bytes
 func BYTECode( w http.ResponseWriter, status int, data []byte ) {
-	w.Header( ).Set( "Content-Type", "application/json" )
+	w.Header( ).Set( "Content-Type", "application/json; charset=utf-8" )
 	w.Header( ).Set( "Access-Control-Allow-Origin", "*" )
 	w.WriteHeader(status)
 	w.Write(data)
