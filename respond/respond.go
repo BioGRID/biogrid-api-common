@@ -59,7 +59,7 @@ func JSONErrorWithIssues( w http.ResponseWriter, status int, message string, iss
 // Format response header and encode interface
 // for standardized json response
 func JSONCode( w http.ResponseWriter, status int, data interface{} ) {
-	w.Header( ).Set( "Content-Type", "application/json" )
+	w.Header( ).Set( "Content-Type", "application/json; charset=utf-8" )
 	w.Header( ).Set( "Access-Control-Allow-Origin", "*" )
 	//w.Header( ).Set( "Connection", "close" )
 	w.WriteHeader(status)
@@ -97,7 +97,7 @@ func BYTEData( w http.ResponseWriter, status int, data []byte ) {
 
 // Output results as Bytes
 func BYTECode( w http.ResponseWriter, status int, data []byte ) {
-	w.Header( ).Set( "Content-Type", "application/json" )
+	w.Header( ).Set( "Content-Type", "application/json; charset=utf-8" )
 	w.Header( ).Set( "Access-Control-Allow-Origin", "*" )
 	w.WriteHeader(status)
 	w.Write(data)
