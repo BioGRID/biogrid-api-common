@@ -7,7 +7,7 @@ package concache_test
 import (
 	"testing"
 	"github.com/stretchr/testify/assert"
-	"github.com/BioGRID/biogrid-auth-api/concache"
+	"github.com/BioGRID/biogrid-api-common/concache"
 )
 
 func TestConcache_SetRecord( t *testing.T ) {
