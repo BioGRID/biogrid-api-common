@@ -79,3 +79,32 @@ func TestParamValidation_Uint64Param( t *testing.T ) {
 	}
 
 }
+
+func TestParamValidation_StringParam( t *testing.T ) {
+
+	var tests = []struct{
+	testDesc	string
+	pVal  		string
+	pName		string
+	defaultVal	string
+	options 	[]string
+	expected  	string
+} {
+	{"Empty pVal","","param","",[]string{},""},
+	{"Spaces","   ","param","",[]string{},""},
+	{"Valid String","abc","param","",[]string{},"abc"},
+	{"Invalid pVal with Default","","param","abc",[]string{},"abc"},
+	{"Non-Ascii","网络","param","",[]string{},"网络"},
+	{"Numerical value","1","param","",[]string{},"1"},
+	{"Valid String not in options","abc","param","default",[]string{ "val1", "val2" },"default"},
+	{"Valid String in options","val2","param","default",[]string{ "val1", "val2" },"val2"},
+	{"Empty String not in options","","param","default",[]string{ "val1", "val2" },"default"},
+}
+
+for _,test := range tests {
+	testutils.OutputTestNote( t, test.testDesc )
+	result := paramvalidation.StringParam( test.pVal, test.pName, test.defaultVal, test.options )
+	assert.Equal( t, test.expected, result )
+}
+
+}
