@@ -7,6 +7,7 @@ package paramvalidation
 import (
 	"errors"
 	"strconv"
+	"strings"
 )
 
 // Validate that a parameter contains only the values
@@ -45,4 +46,25 @@ func Uint64Param( pVal, pName string, allowZero bool, defaultVal uint64 ) (uint6
 	}
 
 	return defaultVal, nil
+}
+
+// Validate that a parameter contains a string
+// and return it or default value
+func StringParam( pVal, pName, defaultVal string, options []string ) (string) {
+	pVal = strings.TrimSpace(pVal)
+	if len(pVal) > 0 {
+		// If we only have a fixed set
+		// of valid options
+		if len(options) > 0 {
+			for _, option := range options {
+				if option == pVal {
+					return pVal
+				}
+			}
+		} else {
+			return pVal
+		}
+	}
+
+	return defaultVal
 }
