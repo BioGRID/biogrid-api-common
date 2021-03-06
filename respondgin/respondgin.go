@@ -5,7 +5,7 @@
 package respondgin
 
 import (
-	"encoding/json"
+	//"encoding/json"
 	"net/http"
 	"github.com/gin-gonic/gin"
 )
