@@ -2,7 +2,7 @@
 // Use of this source code is governed by the MIT License
 // license that can be found in the LICENSE file.
 
-package respond
+package respond_gin
 
 import (
 	"encoding/json"
